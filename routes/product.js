@@ -19,5 +19,9 @@ router.put('/:id/update', product_controller.product_update);
 
 router.delete('/:id/delete', product_controller.product_delete);
 
+app.get('/', function (req, res) {
+ res.send(JSON.stringify({ Hello }));
+});
+
 
 module.exports = router;
