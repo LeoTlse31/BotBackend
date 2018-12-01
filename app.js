@@ -23,8 +23,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/products', product);
 
-var port = 1234;
+var port = process.env.PORT || 3000;
 
-app.listen(port, () => {
-    console.log('Server is up and running on port numner ' + port);
+app.listen(port, function () {
+ console.log('app listening on port !');
 });
